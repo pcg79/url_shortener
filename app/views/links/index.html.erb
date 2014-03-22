@@ -1,0 +1,19 @@
+<h2>Generated links:</h2>
+
+<ul>
+  <% if @links %>
+    <%- @links.each do |link| %>
+      <li>
+        <%= link_to(link.url, "http://#{link.url}") %>
+        -
+        <%= link_to(link.token, link.token) %>
+        -
+        <%= link_to("Edit", edit_link_path(link)) %>
+      </li>
+    <%- end -%>
+  <% else %>
+    You have no links!  Create some!
+  <% end %>
+</ul>
+
+<%= link_to("Generate new link", link_new_path) %>

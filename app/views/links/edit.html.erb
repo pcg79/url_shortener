@@ -1,0 +1,11 @@
+<h2>Edit link</h2>
+
+<%= form_for @link do |f| %>
+  <%= f.label :url, "URL" -%>
+  <%= f.text_field :url -%>
+
+  <%= f.label :token, "Token" -%>
+  <%= f.text_field :token -%>
+
+  <%= f.submit -%>
+<%- end %>
